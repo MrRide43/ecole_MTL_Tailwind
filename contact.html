@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- === Montserrat === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Poppins === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Oswald === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Contact</title>
+  </head>
+
+  <body class="bg-zinc-50">
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Tente de récupérer le fichier "header.html"
+        const response = await fetch("header.html");
+
+        // Vérifie si le fichier a bien été trouvé
+        if (response.ok) {
+          // Convertit le contenu du fichier en texte
+          const headerHTML = await response.text();
+
+          // Ajoute le contenu du header au début de la balise <body>
+          document.body.insertAdjacentHTML("afterbegin", headerHTML);
+        } else {
+          // Affiche une erreur si le fichier est introuvable
+          console.error("Erreur lors du chargement du header");
+        }
+      });
+    </script>
+
+    <section class="bg-zinc-400 p-28 shadow-lg">
+      <h1
+        class="font-Montserrat uppercase text-3xl tracking-wider font-bold text-center pb-4"
+      >
+        Prenez contact avec nous
+      </h1>
+      <p class="font-Poppins text-sm text-center">
+        Le programme vise les hypothèques et/ou les cessions sur les propriétes
+        residentielles. Comprenant quatres (4) logements dont le membre.
+      </p>
+    </section>
+
+    <section
+      class="flex flex-wrap m-auto justify-around items-start w-4/5 gap-8"
+    >
+      <!-- Bloc Contact -->
+      <div class="mt-12 w-full md:w-2/6 flex flex-col justify-between">
+        <h3 class="font-bold font-Poppins tracking-wider pb-6 text-3xl">
+          Contactez-nous
+        </h3>
+        <p class="font-Poppins text-base">
+          Service rapide et adapté à vos besoins
+        </p>
+        <div class="border shadow-md my-6 rounded-2xl p-4">
+          <p class="text-amber-400 font-Poppins font-semibold">Téléphone</p>
+          <p>514-524-4900 / 1-844-524-4900</p>
+        </div>
+        <div class="border shadow-md my-6 rounded-2xl p-4">
+          <p class="text-amber-400 font-Poppins font-semibold">Fax</p>
+          <p>1-855-797-6923</p>
+        </div>
+        <div class="border shadow-md my-6 rounded-2xl p-4">
+          <p class="text-amber-400 font-Poppins font-semibold">E-mail</p>
+          <p>info@coppnq.org</p>
+        </div>
+        <div class="border shadow-md my-6 rounded-2xl p-4">
+          <p class="text-amber-400 font-Poppins font-semibold">Adresse</p>
+          <p>208, boulevard Ste-Rose, Laval Québec, Canada, H7L 1L6</p>
+        </div>
+      </div>
+
+      <!-- Bloc Formulaire -->
+      <div
+        class="border border-zinc-300 shadow-sm bg-white p-12 rounded-md w-full md:w-2/5 flex flex-col mt-12"
+      >
+        <a
+          href="homePage.php"
+          class="flex items-center no-underline hover:underline text-zinc-900 font-Poppins text-xl mb-4"
+        >
+          <img
+            src="assets/logoSansFond.png"
+            alt="logo des finances"
+            class="w-32 h-32 object-cover"
+          />
+          Journée des finances
+        </a>
+
+        <form action="submit_contact.php" method="get" class="flex flex-col gap-5">
+          <div>
+            <label for="nom" class=""></label>
+            <input
+              type="text"
+              id="nom"
+              name="nom"
+              placeholder="Votre nom"
+              required
+              class="w-full px-4 py-2 bg-zinc-200 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-400"
+            />
+          </div>
+          <div>
+            <label for="email" class=""></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Votre mail"
+              required
+              class="w-full px-4 py-2 bg-zinc-200 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-400"
+            />
+          </div>
+          <div>
+            <label for="contexte" class=""></label>
+            <select
+              id="contexte"
+              name="contexte"
+              required
+              class="w-full px-4 py-2 bg-zinc-200 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-400"
+            >
+              <option value="">Sélectionner un contexte</option>
+              <option value="question">Question</option>
+              <option value="feedback">Feedback</option>
+              <option value="support">Support</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class=""></label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Votre message"
+              required
+              class="w-full px-4 py-2 bg-zinc-200 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-zinc-400"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="w-full px-4 py-2 font-Oswald uppercase bg-orange-500 border border-orange-500 rounded-md cursor-pointer hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-300"
+          >
+            Envoyer votre message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Section Footer pour la page Contact.html -->
+
+    <footer class="footer">
+        <div class="container mx-auto py-8 px-6 bg-zinc-400">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+                <!-- Colonne 1 : Informations de contact -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white">Contact</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="tel:+123456789" class="text-white hover:text-orange-500">Téléphone: +1 234 567 89</a></li>
+                        <li><a href="mailto:info@example.com" class="text-white hover:text-orange-500">E-mail: info@example.com</a></li>
+                        <li><a href="index.html" class="text-white hover:text-orange-500">Visiter notre site</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 2 : Liens importants -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white">Liens</h3>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="Apropos.html" class="text-white hover:text-orange-500">À propos</a></li>
+                        <li><a href="#" class="text-white hover:text-orange-500">Nos services</a></li>
+                        <li><a href="contact.html" class="text-white hover:text-orange-500">Contactez-nous</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Colonne 3 : Réseaux sociaux -->
+                <div>
+                    <h3 class="text-lg font-semibold text-white">Suivez-nous</h3>
+                    <ul class="mt-4 flex space-x-6">
+                        <li><a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" class="group"><img src="assets/facebook.png" alt="facebook" class="group-hover:filter group-hover:invert"></a></li>
+                        <li><a href="https://fr.linkedin.com/?original_referer=https%3A%2F%2Fwww.google.com%2F" class="group"><img src="assets/linkedin.png" alt="linkedin" class="group-hover:filter group-hover:invert"></a></li>
+                        <li><a href="https://www.instagram.com/" class="group"><img src="assets/instagram.png" alt="instagram" class="group-hover:filter group-hover:invert"></a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Ligne de copyright -->
+            <div class="mt-8 border-t border-gray-200 pt-4 text-center">
+                <p class="text-white text-sm">© 2024 Nom de votre entreprise. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fin Section Footer pour la page Contact.html -->
+
+  </body>
+</html>

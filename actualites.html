@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <!-- === Montserrat === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Poppins === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Oswald === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Actualités</title>
+  </head>
+  <body class="bg-zinc-50">
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Tente de récupérer le fichier "header.html"
+        const response = await fetch("header.html");
+
+        // Vérifie si le fichier a bien été trouvé
+        if (response.ok) {
+          // Convertit le contenu du fichier en texte
+          const headerHTML = await response.text();
+
+          // Ajoute le contenu du header au début de la balise <body>
+          document.body.insertAdjacentHTML("afterbegin", headerHTML);
+        } else {
+          // Affiche une erreur si le fichier est introuvable
+          console.error("Erreur lors du chargement du header");
+        }
+      });
+    </script>
+
+    <section
+      class="relative flex items-center justify-center overflow-hidden py-32"
+    >
+      <img
+        src="assets/actualite.jpg"
+        class="absolute w-full h-full object-cover z-0 opacity-50"
+        alt="photo diplômé pour actualités"
+      />
+      <h1 class="font-Montserrat text-5xl">Actualités</h1>
+    </section>
+
+    <section class="py-16">
+      <div class="grid grid-cols-3 gap-2 p-4 w-8/12 m-auto">
+        <!-- bloc pour le blog 1 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog1.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 2 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog2.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 3 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog3.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 4 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog4.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 5 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog5.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 6 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog6.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 7 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog7.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 8 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog1.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+
+        <!-- bloc pour le blog 9 -->
+        <div
+          class="max-w-sm mx-auto bg-white shadow-lg rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 cursor-pointer"
+        >
+          <!-- Image -->
+          <div class="relative">
+            <img
+              class="w-full h-48 object-cover"
+              src="assets/blog2.jpg"
+              alt="Image événement"
+            />
+            <!-- Date en haut à gauche -->
+            <div
+              class="absolute top-2 left-2 bg-white text-center rounded-md shadow-md p-2"
+            >
+              <p class="text-sm font-bold leading-none">14</p>
+              <p class="text-xs uppercase">Fév</p>
+            </div>
+          </div>
+
+          <!-- Contenu -->
+          <div class="p-4">
+            <h3 class="font-bold text-lg mb-2">
+              Lorem ipsum data valtod samaa
+            </h3>
+            <p class="text-sm text-gray-500">14 février, 2022</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- Script pour charger dynamiquement le footer -->
+    <script>
+      const footer = document.getElementById("footer");
+
+      fetch("footer.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Erreur réseau lors du chargement du footer");
+          }
+          return response.text();
+        })
+        .then((data) => {
+          footer.innerHTML = data; // Ajout du contenu du footer
+        })
+        .catch((error) => {
+          console.error("Erreur lors de l'inclusion du footer:", error);
+        });
+    </script>
+  </body>
+</html>

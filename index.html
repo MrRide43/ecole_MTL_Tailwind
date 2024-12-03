@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- === Montserrat === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Poppins === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- === Oswald === -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" crossorigin href="./assets/style.css">
+  </head>
+  <body class="bg-zinc-50">
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        // Tente de récupérer le fichier "header.html"
+        const response = await fetch("header.html");
+
+        // Vérifie si le fichier a bien été trouvé
+        if (response.ok) {
+          // Convertit le contenu du fichier en texte
+          const headerHTML = await response.text();
+
+          // Ajoute le contenu du header au début de la balise <body>
+          document.body.insertAdjacentHTML("afterbegin", headerHTML);
+        } else {
+          // Affiche une erreur si le fichier est introuvable
+          console.error("Erreur lors du chargement du header");
+        }
+      });
+    </script>
+
+    <section
+      class="flex justify-center items-center relative py-28 overflow-hidden"
+    >
+      <img
+        src="./assets/diplome-RWKB7Hy-.jpg"
+        class="absolute w-full h-full object-cover z-0 opacity-50"
+        alt="photo de diplomée"
+      />
+      <div class="relative z-10 bg-zinc-100 p-8 items-center rounded-lg w-2/5">
+        <h1 class="font-Montserrat text-2xl text-zinc-600 mb-4">
+          Vous êtes enfin prêt à organiser le grand jour.
+        </h1>
+        <p class="font-Poppins text-zinc-600 mb-6 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="contact.html">
+          <div
+            class="font-Oswald bg-orange-500 text-zinc-100 px-3 py-6 rounded-md text-xl cursor-pointer uppercase transition-colors duration-300 hover:bg-orange-700 m-auto w-2/4 text-center"
+          >
+            Contactez-nous
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="w-2/3 m-auto pt-16">
+      <img
+        src="./assets/eleveDiplome-DNwvUIng.jpg"
+        class="absolute w-[850px] h-[430px] rounded-3xl z-0"
+        alt="etudiant diplomée"
+      />
+      <aside
+        class="relative w-2/6 font-Montserrat bg-zinc-300 rounded-3xl p-7 mt-20 z-10 float-right"
+      >
+        <h2>qui somme-nous ?</h2>
+
+        <h3 class="font-bold">Rapide</h3>
+        <p class="p-3 text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+
+        <h3 class="font-bold">Economique</h3>
+        <p class="p-3 text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+
+        <h3 class="font-bold">Sécuritaire</h3>
+        <p class="p-3 text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </aside>
+
+      <div class="w-2/4 font-Poppins relative text-justify z-20 pt-80 mt-32">
+        <h2 class="pt-4 pr-4 pb-4 pl-0">Réussite éducative Québec</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <div
+          class="flex justify-center items-center font-Oswald bg-orange-500 px-5 py-4 rounded-md cursor-pointer w-2/5 mt-5 hover:bg-orange-700"
+        >
+          <a
+            href="actualites.html"
+            class="text-zinc-800 uppercase no-underline text-xl"
+            >Campagne 2024</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="text-center m-auto p-20 font-Poppins">
+        <h2 class="font-Montserrat font-bold text-3xl">
+          Crée des souvenir impérissables
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="relative w-5/6 max-w-7xl overflow-hidden m-auto">
+        <button
+          class="absolute top-2/4 transform -translate-y-1/2 bg-black/50 text-white border-none p-3 cursor-pointer text-2xl z-10 left-3"
+          onclick="prevSlide()"
+        >
+          &#10094;
+        </button>
+        <div
+          class="carousel-track flex transition-transform duration-300 ease-in-out gap-4 px-2"
+        >
+          <img
+            src="./assets/image1-Df5GMC-L.jpg"
+            alt="Image 1"
+            class="carousel-image h-auto rounded-xl object-cover w-custom"
+          />
+          <img
+            src="./assets/image2-BmNt583W.jpg"
+            alt="Image 2"
+            class="carousel-image h-auto rounded-xl object-cover w-custom"
+          />
+          <img
+            src="./assets/image3-BgvAw5Lh.jpg"
+            alt="Image 3"
+            class="carousel-image h-auto rounded-xl object-cover w-custom"
+          />
+          <img
+            src="./assets/image4-pUR2lq4E.jpg"
+            alt="Image 4"
+            class="carousel-image h-auto rounded-xl object-cover w-custom"
+          />
+          <img
+            src="./assets/image1-Df5GMC-L.jpg"
+            alt="Image 5"
+            class="carousel-image h-auto rounded-xl object-cover w-custom"
+          />
+        </div>
+        <button
+          class="absolute top-2/4 transform -translate-y-1/2 bg-black/50 text-white border-none p-3 cursor-pointer text-2xl z-10 right-3"
+          onclick="nextSlide()"
+        >
+          &#10095;
+        </button>
+      </div>
+      <script src="carrousel.js"></script>
+    </section>
+
+    <section class="bg-zinc-300 mt-20 pb-12">
+      <div class="text-center m-auto p-20 font-Poppins">
+        <h2 class="font-Montserrat font-bold text-3xl">
+          Crée des souvenir impérissables
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+
+      <div class="flex justify-center">
+        <video controls width="55%" class="rounded-2xl mb-12">
+          <source src="./assets/videoDiplome-B2mUhzY_.mp4" type="video/mp4" />
+          Votre navigateur ne supporte pas la lecture des vidéos HTML5.
+        </video>
+      </div>
+
+      <div
+        class="flex justify-center items-center m-auto font-Oswald bg-orange-500 px-5 py-4 rounded-md cursor-pointer w-2/12 mt-5 hover:bg-orange-700"
+      >
+        <a
+          href="actualites.html"
+          class="uppercase none no-underline text-base font-Oswald"
+          >Campagne 2024</a
+        >
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="w-7/12 m-auto bg-orange-400 rounded-2xl p-8 mt-28 mb-28 font-Poppins"
+      >
+        <h2 class="uppercase font-Montserrat text-xl font-bold">
+          Un mot des organisateurs
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <div class="bg-white rounded-2xl p-8 mt-4 shadow-xl">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="flex items-center gap-8 mt-4">
+            <div class="w-[100px] h-[100px] overflow-hidden rounded-full">
+              <img
+                src="./assets/profil-BqitpG9a.jpg"
+                alt="Photo de profil"
+                class="w-full h-full object-cover block"
+              />
+            </div>
+            <p>John Doa Organisateur</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="relative w-full h-96 bg-trio-diplomer flex justify-center overflow-hidden items-center bg-cover opacity-70"
+    >
+      <div class="absolute w-full h-full left-0 top-0"></div>
+      <h1 class="relative font-Montserrat text-center z-10 text-5xl">
+        Célébrer pour l'avenir
+      </h1>
+    </section>
+
+    <!-- Footer sera inséré ici -->
+    <footer id="footer"></footer>
+
+    <!-- Script pour charger dynamiquement le footer -->
+    <script>
+      const footer = document.getElementById("footer");
+
+      fetch("footer.html")
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Erreur réseau lors du chargement du footer");
+          }
+          return response.text();
+        })
+        .then((data) => {
+          footer.innerHTML = data; // Ajout du contenu du footer
+        })
+        .catch((error) => {
+          console.error("Erreur lors de l'inclusion du footer:", error);
+        });
+    </script>
+  </body>
+</html>
